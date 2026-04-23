@@ -18,8 +18,10 @@ internal static class Util
 
         try
         {
-            wine_get_version();
-            IsWine = true;
+            if (isLinux) {
+                wine_get_version();
+                IsWine = true;
+            }
         }
         catch
         {
